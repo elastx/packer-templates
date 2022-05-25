@@ -25,7 +25,7 @@
         "{{ user `virtio_win_iso_dir` }}"
       ],
       "memory": "{{ user `memory` }}",
-      "output_directory": "{{ user `name` }}-qemu",
+      "output_directory": "images",
       "shutdown_command": "A:\\sysprep.bat",
       "shutdown_timeout": "15m",
       "type": "qemu",
