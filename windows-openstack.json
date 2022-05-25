@@ -34,18 +34,9 @@
       "winrm_password": "{{ user `winrm_password` }}",
       "winrm_timeout": "1h",
       "winrm_use_ssl": "true",
-      "winrm_username": "{{ user `winrm_username` }}"
+      "winrm_username": "{{ user `winrm_username` }}",
+      "disk_compression": "true"
     }
-  ],
-  "post-processors": [
-    [
-      {
-        "compression_level": 9,
-        "output": "{{ user `packer_images_output_dir` }}/{{ user `name` }}-{{ .Provider }}.box",
-        "type": "vagrant",
-        "vagrantfile_template": "Vagrantfile-windows.template"
-      }
-    ]
   ],
   "provisioners": [
     {
